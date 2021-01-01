@@ -1,10 +1,9 @@
 <template>
-  <v-app>
-    <Header />
-    <Menu />
-    <v-main>
+  <v-app >
+    <Header v-if="false"/>
+    <Menu v-if="false" />
+    <v-main >
       <Content />
-      <router-view />
     </v-main>
   </v-app>
 </template>

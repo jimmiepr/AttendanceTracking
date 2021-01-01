@@ -5,7 +5,7 @@
       <v-divider vertical inset/>
       <v-btn text>
           logout
-          <v-icon></v-icon>
+          <v-icon>mdi-arrow-right-bold-box-outline</v-icon>
       </v-btn>
     </v-app-bar>
   </div>
