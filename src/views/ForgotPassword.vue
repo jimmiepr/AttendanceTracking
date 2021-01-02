@@ -1,15 +1,16 @@
 <template>
   <div>
-    <h1>Check-in</h1>
-    <v-btn @click="$router.back()">back</v-btn>
+    <h1>Forgot</h1>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: "CheckIn",
-};
+
+}
 </script>
 
 <style>
+
 </style>

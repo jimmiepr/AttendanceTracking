@@ -1,10 +1,8 @@
 <template>
-  <v-app >
-    <Header v-if="false"/>
-    <Menu v-if="false" />
-    <v-main >
-      <Content />
-    </v-main>
+  <v-app>
+    <Header v-if="$store.getters.GET_IS_LOGIN" />
+    <Menu v-if="$store.getters.GET_IS_LOGIN" />
+    <Content />
   </v-app>
 </template>
 

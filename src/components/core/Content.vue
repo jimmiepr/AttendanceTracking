@@ -1,9 +1,9 @@
 <template>
-  <v-content class="bg">
+  <v-main class="bg">
       <v-fab-transition >
           <router-view />
       </v-fab-transition>
-  </v-content>
+  </v-main>
 </template>
 
 <script>

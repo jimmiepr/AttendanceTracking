@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-app-bar app>
+      <h1>Username : {{$store.getters.GET_USERNAME | capitalize}}</h1>
       <v-spacer />
       <v-divider vertical inset/>
       <v-btn text>
