@@ -105,6 +105,8 @@
 </template>
 
 <script>
+import api from '@/services/api';
+
 import DateTimePicker from "@/components/DateTimePicker/DateTimePicker";
 export default {
   name: "Register",
@@ -131,6 +133,9 @@ export default {
     GET_BD(child) {
       this.account.dateBorn = child;
     },
+    async onSubmit() {
+        await api.register(this.account)
+    }
   },
 };
 </script>

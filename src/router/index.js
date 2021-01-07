@@ -4,6 +4,8 @@ import Login from "@/views/Login";
 import Register from "@/views/Register";
 import CheckIn from "@/views/CheckIn";
 import Report from "@/views/Report";
+import SubmitPetition from '@/views/SubmitPetition';  
+import Petition from '@/views/Petition';  
 import ForgotPassword from '@/views/ForgotPassword';
 
 Vue.use(VueRouter)
@@ -33,6 +35,16 @@ const routes = [
     path: '/forgot',
     name: 'ForgotPassword',
     component: ForgotPassword
+  },
+  {
+    path: '/petition',
+    name: 'Petition',
+    component: Petition
+  },
+  {
+    path: '/submit-petition/:id',
+    name: 'SubmitPetition',
+    component: SubmitPetition
   },
   {
     path: '/',

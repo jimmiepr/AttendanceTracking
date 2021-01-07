@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer dark permanent app>
+  <v-navigation-drawer color="#f5f5f5" permanent app>
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="title"> Attendance </v-list-item-title>
@@ -17,12 +17,12 @@
           link
           @click="onClickMenu(route)"
         >
-          <v-list-item-icon>
-            <v-icon>{{ icon }}</v-icon>
+          <v-list-item-icon class="tile">
+            <v-icon >{{ icon }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title>{{ title }}</v-list-item-title>
+            <v-list-item-title class="tile">{{ title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-item-group>
@@ -38,7 +38,8 @@ export default {
       selectedMenu: 0,
       menus: [
         ["Check-in", "mdi-view-dashboard", "/check-in"],
-        ["Report", "mdi-forum", "/report"],
+        ["Report", "assignment", "/report"],
+        ["Your petition", "mdi-forum", "/petition"],
       ],
     };
   },
@@ -59,7 +60,7 @@ export default {
 </script>
 
 <style scoped>
-.menuBar{
-    background-color: coral;
+.tile{
+  color: black;
 }
 </style>

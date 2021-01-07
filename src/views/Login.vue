@@ -61,7 +61,6 @@ export default {
         username: this.account.username,
         password: this.account.password,
       });
-      console.log("dispatched");
     },
   },
 };

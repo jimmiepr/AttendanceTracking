@@ -1,24 +1,24 @@
 <template>
-    <v-menu v-model="fromDateMenu" :close-on-content-click="false">
-      <template v-slot:activator="{ on }">
-        <v-text-field
-          :label="text"
-          prepend-inner-icon="event"
-          readonly
-          outlined
-          :value="fromDateDisp"
-          v-on="on"
-        ></v-text-field>
-      </template>
-      <v-date-picker
-        locale="en-in"
-        :min="minDate"
-        :max="maxDate"
-        v-model="fromDateVal"
-        no-title
-        @input="sendDate"
-      ></v-date-picker>
-    </v-menu>
+  <v-menu v-model="fromDateMenu" :close-on-content-click="false">
+    <template v-slot:activator="{ on }">
+      <v-text-field
+        :label="text"
+        prepend-inner-icon="event"
+        readonly
+        outlined
+        :value="fromDateDisp"
+        v-on="on"
+      ></v-text-field>
+    </template>
+    <v-date-picker
+      locale="en-in"
+      :min="minDate"
+      :max="maxDate"
+      v-model="fromDateVal"
+      no-title
+      @input="sendDate"
+    ></v-date-picker>
+  </v-menu>
 </template>
 <script>
 export default {
@@ -51,3 +51,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>

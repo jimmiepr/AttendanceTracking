@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Header v-if="$store.getters.GET_IS_LOGIN" />
-    <Menu v-if="$store.getters.GET_IS_LOGIN" />
+    <Menu v-if="$store.getters.GET_IS_SHOW_MENU" />
     <Content />
   </v-app>
 </template>
@@ -17,6 +17,11 @@ export default {
     Header,
     Menu,
     Content,
+  },
+  mounted() {
+    this.$store.dispatch({
+      type: "RESTORE_LOGIN"
+    })
   },
 };
 </script>

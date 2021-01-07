@@ -1,12 +1,14 @@
 <template>
   <div>
-    <v-app-bar app>
-      <h1>Username : {{$store.getters.GET_USERNAME | capitalize}}</h1>
+    <v-app-bar app light permanent>
+      <v-btn text @click="toggleMenu">
+        <v-icon>toc</v-icon>
+      </v-btn>
       <v-spacer />
-      <v-divider vertical inset/>
-      <v-btn text>
-          logout
-          <v-icon>mdi-arrow-right-bold-box-outline</v-icon>
+      <v-divider vertical inset />
+      <v-btn text @click="logOut">
+        logout
+        <v-icon>mdi-arrow-right-bold-box-outline</v-icon>
       </v-btn>
     </v-app-bar>
   </div>
@@ -15,6 +17,18 @@
 <script>
 export default {
   name: "Header",
+  methods: {
+    logOut() {
+      this.$store.dispatch({
+        type: "DO_LOGOUT",
+      });
+    },
+    toggleMenu() {
+      this.$store.dispatch({
+        type: "TOGGLE_MENU",
+      });
+    },
+  },
 };
 </script>
 
